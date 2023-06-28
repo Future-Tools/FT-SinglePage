@@ -3,9 +3,70 @@
     <title>Futuretools</title>
     <link href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/dosis" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
 
+/* THIS PROBABLY NEEDS A REBUILD WHEN YOU HAVE THE TIME.... */
+
+/*
+.topnav {
+  overflow: hidden;
+  background-color: #fff;
+  font-size:42px;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.topnav a.active {
+  background-color: #ccc;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+  height:52px;
+  padding-right: 20px;
+  color: black;
+}
+*/
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    padding-right: 20px;
+    right: 0px;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
     <script>
         function myFunction() {
             var jules = document.getElementById("about").scrollTop;
@@ -16,14 +77,17 @@
 </head>
 <body onClick="myFunction()" onmousewheel="myFunction()" onkeydown="myFunction()">
 
-    <div class="navbar">
-        <a class="nav_item" href="#about">about</a>
+    <div class="navbar"id="myTopnav">
+        <a class="nav_item" href="#home"><img class="logo_img" ></img></a>
         <a class="nav_item" href="#open">open</a>
         <a class="nav_item" href="#agile">agile</a>
         <a class="nav_item" href="#biodigital">biodigital</a>
         <a class="nav_item" href="#method">method</a>
         <a class="nav_item" href="#service">services</a>
         <a class="nav_item" href="#contact">contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction2()">
+            <i class="fa fa-bars" ></i>
+          </a>
         <!---
         <div class="dropdown ">
             <button class="dropbtn ">approach
@@ -35,15 +99,26 @@
             </div>
           </div> 
         -->  
-        <a class="logo_img" href="#home"><img class="logo_img" style="float:right;"></img></a>
+    
     </div>
+    
+    <script>
+    function myFunction2() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "nav_item") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav_item";
+      }
+    }
+    </script>
     <!-- PAGE CONTAINER -->
     <div class="container">
 
         <!-- FUTURE TOOLS-->
         <div class ="page" id="home" style="background-color:rgb(51,51,51); background-image: url('img/UNCERTAIN_2.jpg');  background-repeat: no-repeat;
         background-size: cover;">
-            <div class="section_txt" style="color: white;background-color:rgb(51,51,51); padding:5px; width:25%;min-width:300px;margin-left:7%;padding-top:100px;font-size: 50;">
+            <div class="section_txt" style="color: white;background-color:rgb(51,51,51); padding:5px; width:25%;min-width:300px;margin-left:7%;padding-top:100px;">
                 <br>The sustainable design of buildings, products, and services requires a fast and agile future design experience. 
             </div>
         </div>
@@ -58,7 +133,7 @@
         <div class="page" style="background-color:rgb(51,51,51);color:white;">
             <div style="width:90%;padding-left:10%;padding-top:100px;">
                 <h2>Inspired by buildings and biology<h2>
-                <div class="two_ideas"> We spend upto 90% of our lives inside buildings. This makes buildings a common platform for future products and services, but this relationship is very complex.</div>
+                <div class="two_ideas"> We spend upto 90% of our lives inside buildings. They provide a common platform to playout the complex relationships between people, products and planet.</div>
                 <div class="two_ideas"> Biology provides a lens to view complex sustainable systems - we show how to apply this lens to buildings as product platforms to support future agile design.</div>
             </div>
         </div>
@@ -66,14 +141,14 @@
         <!-- ABOUT PAGE -->
         <div class="page" id="about" >
             <div class="about_txt">
-            Futuretools provides research based design consultancy on the future design experience of buildings, products and services through <mark><a href="#open">Open</a></mark>, <mark><a href="#agile">Agile</a></mark> and <mark><a href="#biodigital">BioDigital</a></mark> processes.
+            Futuretools provides research based consultancy on the future design experience of buildings, products and services through <mark><a href="#open">Open</a></mark>, <mark><a href="#agile">Agile</a></mark> and <mark><a href="#biodigital">BioDigital</a></mark> processes.
             </div>
         </div>
 
         <!-- OPEN Splash -->
         <div class ="page" id="open" style="background-image: url('img/OPEN.jpg');  background-repeat: no-repeat;background-size: cover;">
             <div class="section_txt">
-                <br><mark>We support interoperable and OPEN building, product design systems.</mark>
+                <br><mark>We support open and interoperable building and product design systems.</mark>
             </div>
             <div class="logo_txt" style="">open</div>
         </div>
@@ -85,8 +160,8 @@
                 <img src="img/TREBLE.avif" style="width:80%;padding-top:20px;padding-bottom:20px;" alt="">
             </div>
             <div class="testamonial" style="width:40%">
-                <span style="text-align: left; font-size: 60;padding-top:0px;">Open or Closed?</span><p>Future Tools collaborated with <a href= "http://aecgeeks.com/">AECgeeks</a> to help <a href="https://www.treble.tech/platform"> Treble Technologies</a> evaluate the value in supporting Open, <a href = "https://www.go-fair.org/fair-principles/">FAIR</a> and <a href = "https://www.iso.org/standards.html">standardised</a> interoperabilty workflows in their innovative acoustic design analysis tool.</p><br>
-                
+                <p><i>"Future Tools teamed up with <a href= "http://aecgeeks.com/">AECgeeks</a> to help us evaluate Open, <a href = "https://www.go-fair.org/fair-principles/">FAIR</a>, <a href = "https://www.iso.org/standards.html">standardised</a> and interoperable workflows for our innovative acoustic design analysis tool."</i></p>
+                Jesper Pedersen, Chief Product Officer, <a href= "https://www.treble.tech/">Treble Technologies</a>
             </div>
         </div>
 
@@ -95,7 +170,7 @@
         <!-- AGILE Splash-->
         <div class ="page" id="agile" style="background-image: url('img/AGILE_2.jpg');  background-repeat: no-repeat;background-size: cover;">
             <div class="section_txt">
-                <br><mark>We support modular, recomposable, reusable and AGILE design systems.</mark>
+                <br><mark>We support modular, recomposable, reusable and agile design systems.</mark>
             </div>
             <div class="logo_txt" style="">&nbsp;agile</div>
         </div>
@@ -109,8 +184,8 @@
                 <span style="font-weight: 700;font-size: 30;">Australian Institute of Architects, SA<br> Small Project Award Commendation</span >
             </div>
             <div class="testamonial" style="width:40%;padding-left:5%;padding-right:5%;">
-                <span style="text-align: left; font-size: 60;padding-top:0px;">Agile X Design Method</span><p>
-                <i>"a design methodology that represents a new and highly dynamic way of creating architectural space [...] a highly innovative and creative response to the design process and prototyping technology"</i></p><br>
+                <p>
+                <i>"[The Agile X Design Methodology] represents a new and highly dynamic way of creating architectural space [...] a highly innovative and creative response to the design process and prototyping technology"</i></p>
                 <span style="font-weight: 700;font-size: 30;">Australian Institute of Architects, SA<br> Small Project Award Commendation</span >
             </div>
         </div>
@@ -120,33 +195,34 @@
         <!-- BIODIGITAL Splash-->
         <div class ="page" id="biodigital" style="background-color:black; background-image: url('img/BIODIGITAL_2.jpg');  background-repeat: no-repeat;background-size: cover;">
             <div class="section_txt">
-                <br> <mark>We support recomposable, design gene based, BIODIGITAL product portfolios.</mark>
+                <br> <mark>We support recomposable, design gene based, biodigital building systems.</mark>
             </div>
             <div class="logo_txt" style="">BIODIGITAL</div>
-        </div>
-
-        <!-- BIODIGITAL Testamonial - DesignGene-->
-        <div class ="page">
-            <div class="testamonial">
-                <br>
-                <img src="img/RESEARCH.png" style="width:80%;" alt="">
-            </div>
-            <div class="testamonial" style="width:40%">
-                <br><br><i>"The REVERSE ENGINEERING process is the first satge of gene identification it breaks the design down into 'psuedo' deelopemntal stages."</i>
-            </div>
         </div>
         
         <!-- BIODIGITAL Testamonial - DesignGene-->
         <div class ="page">
             <div class="testamonial">
                 <br>
-                <img src="img/RESEARCH.png" style="width:80%;" alt="">
+                <img src="img/SYSTEM.png" style="width:80%;" alt=""><br>
+                <span style="font-weight: 700;font-size: 20;"><i>McGinley & Krijnen (2023), A Framework for Metadisicplinary Building Analysis</i></span >
             </div>
             <div class="testamonial" style="width:40%">
-                <br><br><i>"The Design gene identification service is research based and unique. It is for clients who want a competitive adavantage in an uncertain future"</i>
+                <br>Buildings are complex systems of systems that include the facade, core, structure, building services, chairs, desks and even cleaning products. Building systems require the expertise of Architects, Engineers and Designers.
             </div>
         </div>
 
+        <!-- BIODIGITAL Testamonial - DesignGene-->
+        <div class ="page">
+            <div class="testamonial">
+                
+                <img src="img/RESEARCH.png" style="width:80%;" alt="">
+            </div>
+            <div class="testamonial" style="width:40%">
+                <br> Future Tools have developed a unique method based on 20 years of research to enable you to visualise the evolutionary history and then edit the 'design genes' of the building systems in your portfolio using the Agile Biodigital Futuring Method.
+            </div>
+        </div>
+       
         <!-- include 2 x services / products in this area - probs REVENG / EVO (PHENO) and (GENO) DESIGN GENE ANALYSIS [design gene mananagement software - speckle]? - also get one for products....-->
         
         <!-- METHODS -->
@@ -182,12 +258,58 @@
 
         <!-- SERVICES -->
 
+
+ include id of which products services and systems to include in further investigation
+benchmark where the company is right now, by analysing the genetics of the preivously scoped products, services and systems.
+Co-develop genetic modifications to the products to alter their future trajectory towards the newly identified futures.
+
         <div class ="page" id="service">
             <br>
             <div style="width:100%;padding-top:60px;display:flex; justify-content: center;">
-                <div class="service">Level 1<br>research and development support</div>
-                <div class="service">Level 2<br>design analysis</div>
-                <div class="service">Level 3<br>design + change management strategy</div>
+                <table width = "60%">
+                    <tr>
+                      <th style="text-align: left;">Services</th>
+                      <th style="text-align: center;">Service Level 1</th>
+                      <th style="text-align: center;">Service Level 2</th>
+                      <th style="text-align: center;">Service Level 3</th>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Forecast Futures</td>
+                      <td style="text-align: center;">✔</td>
+                      <td style="text-align: center;">✔</td>
+                      <th style="text-align: center;">✔</th>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Future Building System Needs</td>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;">✔</td>
+                      <th style="text-align: center;">✔</th>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Discover Genes</td>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;"></td>
+                      <td style="text-align: center;">✔</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Parametric Product Portfolio</td>
+                        <td style="text-align: left;"><ul>
+                                <li>Future Building System Report</li>
+                            </ul>
+                        </td>
+                        <td style="text-align: left;"><ul>
+                                <li>Future Building System Report</li>
+                                <li>Building System Design Genes</li>
+                            </ul>
+                        </td>  
+                        <td style="text-align: left;"><ul>
+                                <li>Future Building System Report</li>
+                                <li>Building System Design Genes</li>
+                                <li>Parametric Product Portfolio</li>
+                            </ul>
+                        </td>               
+                    </tr>
+                  </table>
             </div>
         </div>
 

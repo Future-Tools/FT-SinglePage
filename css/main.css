@@ -1,6 +1,6 @@
 body {
     font-family: 'Dosis', sans-serif;
-    font-size: 50;
+    font-size: 50px;
     margin:0px;
     background-color: black;
     overflow-x: hidden;
@@ -47,6 +47,22 @@ mark {
     text-align:left;
 }
 
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    width:25%;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
 .banner {
     position: absolute;
     bottom: 0;
@@ -54,7 +70,7 @@ mark {
     font-family: 'Bebas Neue', sans-serif;
     font-style: italic;
     font-weight: 700;
-    font-size: 300;
+
     color: white;
     margin-left:5%;
 }
@@ -91,9 +107,7 @@ mark {
 .logo_img {
     content:url(../img/FT_logo_black.png);
     max-width: 100px;
-    float:right;
-    margin:8px;
-    margin-right:72px;
+    margin:7px;
 }
 ul {
     list-style-type: none;
@@ -112,10 +126,11 @@ li {
 .navbar {
     position:fixed;
     overflow: hidden;
+    background-color: white;
     width:95%;
     margin:0px;
     padding-left:5%;
-    background-color: white;
+    font-size:42px;
     z-index: 100;
 }
 
@@ -126,31 +141,41 @@ li {
     padding-right: 15px;
     padding-left: 10px;
     text-decoration: none;
+    /* not sure about this one */
+    
 }
 
 .navbar .logo_img {
-    float: right;
     text-decoration: none;
+    margin-bottom: 12px;
 }
 
+.navbar .icon {
+    display: none;
+    height:52px;
+    padding-right: 20px;
+    color: black;
+    overflow: hidden;
+  }
+
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #111;
+    background-color: #000;
     color: white;
 }
 
 .navbar .logo_img:hover, .dropdown:hover .dropbtn {
-    background-color: #ffffff;
+    
     color: white;
-    float:right;
 }
 
 .nav_item {
     font-family: 'Bebas Neue', sans-serif;
     font-style: italic;
+    display: block;
     font-weight: 700;
-    font-size: 42;
+    font-size: 42px;
     color: black;
-    margin-left:20px;
+    background-color: white;
 }
 
 /* dropdown */
@@ -239,3 +264,22 @@ li {
     margin:10px;
     padding:5px;
 }
+
+/* responsive */
+
+@media only screen and (max-width: 600px) {
+    /* For desktop: */
+    .section_txt{font-size: 30;}
+    .banner{font-size:100;}
+  }
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .section_txt{font-size: 40;}
+    .banner{font-size:200;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .section_txt{font-size: 50;}
+    .banner{font-size:300;}
+  
