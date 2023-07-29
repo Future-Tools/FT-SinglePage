@@ -48,7 +48,7 @@ mark {
 }
 
 table {
-    font-family: arial, sans-serif;
+    font-size: 30px !important;
     border-collapse: collapse;
     width: 60%;
   }
